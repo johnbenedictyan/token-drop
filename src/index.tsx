@@ -1,15 +1,21 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import { ThirdwebProvider } from "@thirdweb-dev/react";
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App";
+import "./index.css";
+import reportWebVitals from "./reportWebVitals";
 
 const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
+  document.getElementById("root") as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <App />
+    <ThirdwebProvider
+      activeChain="sepolia"
+      clientId="6742cb84e770a8ceed0255d8e74a3c62"
+    >
+      <App />
+    </ThirdwebProvider>
   </React.StrictMode>
 );
 
