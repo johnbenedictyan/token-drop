@@ -11,8 +11,8 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <ThirdwebProvider
-      activeChain="sepolia"
-      clientId="6742cb84e770a8ceed0255d8e74a3c62"
+      activeChain={process.env.REACT_APP_THIRD_WEB_ACTIVE_CHAIN}
+      clientId={process.env.REACT_APP_THIRD_WEB_CLIENT_ID}
     >
       <App />
     </ThirdwebProvider>
