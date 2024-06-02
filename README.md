@@ -44,3 +44,19 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+## To Deploy Page onto Github Pages
+
+1. `npm install gh-pages --save-dev`
+
+2. add
+```
+"predeploy" : "npm run build",
+"deploy" : "gh-pages -d build",
+```
+to package.json
+
+3. add homepage to package.json
+   `"homepage": "https://${YOUR_USERNAME}.github.io/${REPO_NAME}"`
+
+4. add environment variables to setting page
